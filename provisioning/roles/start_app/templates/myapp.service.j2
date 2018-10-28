@@ -1,0 +1,14 @@
+[Unit]
+Description=my python app
+After=network.target
+
+[Service]
+Type=forking
+User=vagrant
+Group=vagrant
+ExecStart=/home/vagrant/webapp-start.sh
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

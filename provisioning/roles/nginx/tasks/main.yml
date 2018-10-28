@@ -1,0 +1,10 @@
+---
+# tasks file for nginx
+- name: Install NGINX
+  apt: name=nginx state=present
+
+- name: Replace NGINX default config with custom config
+  copy: src=default dest=/etc/nginx/sites-enabled/default follow=yes
+  notify:
+   - reload_nginx
+

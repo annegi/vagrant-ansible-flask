@@ -1,0 +1,4 @@
+---
+# tasks file for install_dependency
+- name: Install Application prerequisites
+  pip: requirements=/webapp/devops/requirements.txt

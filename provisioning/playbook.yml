@@ -1,0 +1,13 @@
+---
+- hosts: mydev01
+  become: yes
+  gather_facts: true
+
+  roles:
+    - install_prerequisite
+    - checkout
+    - install_dependency
+    - start_app
+    - nginx
+    - logrotate
+

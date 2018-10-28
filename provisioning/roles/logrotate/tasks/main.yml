@@ -1,0 +1,7 @@
+---
+# tasks file for logrotate
+- name: Install logrotate
+  apt: name=logrotate state=present
+
+- name: Setup logrotate for myapp
+  template: src=myapp.conf.j2 dest=/etc/logrotate.d/myapp

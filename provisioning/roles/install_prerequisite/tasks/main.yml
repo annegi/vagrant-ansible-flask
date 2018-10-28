@@ -1,0 +1,7 @@
+---
+# tasks file for install_git
+- name: Update apt repo and Install prerequisite packages
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - git
+    - python3-pip

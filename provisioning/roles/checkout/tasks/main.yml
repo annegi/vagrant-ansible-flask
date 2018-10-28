@@ -1,0 +1,4 @@
+---
+- name: Clone the repository in /webapp/devops and provide base user permissions
+  git: repo='https://bitbucket.org/azneita/devops-challenge.git' dest='/webapp/devops' update='no'
+- file: dest=/webapp/devops owner=vagrant group=vagrant mode=u=rwX,g=rX,o=rX recurse=yes
