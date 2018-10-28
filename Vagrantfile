@@ -14,6 +14,9 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "mydev01"
   config.vm.network :private_network, ip: "10.10.10.20"
 
+  config.vm.define :mydev01 do |mydev01|
+  end
+
   # Ansible provisioner.
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
